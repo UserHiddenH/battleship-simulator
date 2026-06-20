@@ -1,10 +1,9 @@
-# Battleship — Python Terminal Simulator
-
+<h1 align="center">Battleship — Python Terminal Simulator</h1>
+<p align="center">
 A fully-featured Battleship game playable in the terminal, built in Python with no external dependencies. Three game modes including an AI vs AI statistical simulation over 100 games.
 
 >  **Group project** (4 people) — *L1 Maths-CS, Université Paris Cité*. The goal was to reproduce the classic Battleship game as a Python terminal application.
-
----
+</p>
 
 ## Preview
 
