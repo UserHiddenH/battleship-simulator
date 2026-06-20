@@ -1,15 +1,14 @@
-Battleship — Python Terminal Simulator
+# Battleship — Python Terminal Simulator
 
 A fully-featured Battleship game playable in the terminal, built in Python with no external dependencies. Three game modes including an AI vs AI statistical simulation over 100 games.
 
+>  **Group project** (4 people) — *L1 Maths-CS, Université Paris Cité*. The goal was to reproduce the classic Battleship game as a Python terminal application.
 
-Group project (4 people) — L1 Maths-CS, Université Paris Cité. The goal was to reproduce the classic Battleship game as a Python terminal application.
+---
 
+## Preview
 
-
-
-Preview
-
+```
     1 2 3 4 5 6 7 8 9 10
 A   . . . . . . . . . .
 B   . . . B B B B . . .
@@ -23,76 +22,88 @@ I   . . . . . . . . . .
 J   . . . . . . . . . .
 
 Legend:  B = ship  |  X = hit  |  O = miss
+```
 
+---
 
-Features
+## Features
 
+### 3 game modes
+- `1` — Human vs Human (hotseat)
+- `2` — Human vs AI
+- `3` — AI vs AI (statistics over 100 games)
 
-3 game modes
+### Smart ship placement
+- 5 ships with standard sizes: 5, 4, 3, 3, 2
+- Overlap and adjacency checks between ships
+- Directional placement: `Z` (up) `S` (down) `Q` (left) `D` (right)
 
-1 — Human vs Human (hotseat)
-2 — Human vs AI
-3 — AI vs AI (statistics over 100 games)
+### AI with targeting logic
+- Fires randomly until a ship is hit
+- Then targets adjacent cells to finish off the ship
+- Automatically marks cells around a sunken ship as useless
 
+### Statistics mode *(mode 3)*
+- Silently simulates 100 AI vs AI games
+- Displays each side's win rate
+- Determines whether the first player has a statistical advantage
 
+---
 
-Smart ship placement
+## Getting Started
 
-5 ships with standard sizes: 5, 4, 3, 3, 2
-Overlap and adjacency checks between ships
-Directional placement: Z (up) S (down) Q (left) D (right)
+**Requirements:** Python 3.x — no external libraries needed.
 
-
-
-AI with targeting logic
-
-Fires randomly until a ship is hit
-Then targets adjacent cells to finish off the ship
-Automatically marks cells around a sunken ship as useless
-
-
-
-Statistics mode (mode 3)
-
-Silently simulates 100 AI vs AI games
-Displays each side's win rate
-Determines whether the first player has a statistical advantage
-
-
-Getting Started
-
-Requirements: Python 3.x — no external libraries needed.
-
-bashgit clone https://github.com/your-username/battleship-simulator.git
+```bash
+git clone https://github.com/UserHiddenH/battleship-simulator.git
 cd battleship-simulator
-python BN1_code.py
+python battleship-simulator_code.py
+```
 
 Then choose your game mode in the terminal:
 
+```
 Choose your mode: 1 (H vs H)  |  2 (H vs AI)  |  3 (AI vs AI stats)
+```
 
+---
 
-Project Structure
+## Project Structure
 
+```
 battleship-simulator/
 │
 ├── battleship-simulator_code.py        # Single source file — all game logic
 ├── .gitignore        # Python gitignore
 └── README.md
+```
 
-Code Overview
+---
 
-The project follows a functional approach: each responsibility is isolated in a documented function with its type signature.
+## Code Overview
 
-FunctionRolecreer_grille()Initializes an empty 10×10 gridafficher_grille()Renders the grid in the terminalconvertir_coordonne()Parses and validates user input (e.g. A5)peut_placer_bateau()Checks placement constraints (bounds + adjacency)placer_bateaux()Interactive ship placement for a human playerplacer_bateaux_IA()Random rule-compliant placement for the AIverifier_bateau_coule()Detects whether all cells of a ship have been hittirer()Human player's shooting turntirer_IA()AI shooting turn (smart targeting)partie()Entry point — handles all 3 game modes
+The project follows a **functional approach**: each responsibility is isolated in a documented function with its type signature.
 
+| Function | Role |
+|---|---|
+| `creer_grille()` | Initializes an empty 10×10 grid |
+| `afficher_grille()` | Renders the grid in the terminal |
+| `convertir_coordonne()` | Parses and validates user input (e.g. `A5`) |
+| `peut_placer_bateau()` | Checks placement constraints (bounds + adjacency) |
+| `placer_bateaux()` | Interactive ship placement for a human player |
+| `placer_bateaux_IA()` | Random rule-compliant placement for the AI |
+| `verifier_bateau_coule()` | Detects whether all cells of a ship have been hit |
+| `tirer()` | Human player's shooting turn |
+| `tirer_IA()` | AI shooting turn (smart targeting) |
+| `partie()` | Entry point — handles all 3 game modes |
 
-What I Learned
+---
+
+## What I Learned
 
 This was a first-year group project at Université Paris Cité, built collaboratively with 3 teammates. It helped me work on:
 
-
-Modeling a game state with separate grids (real state vs display)
-Implementing a simple AI combining random fire with a targeting heuristic
-User input validation and edge case handling
-Writing documented, readable code with docstrings on every function
+- **Modeling a game state** with separate grids (real state vs display)
+- **Implementing a simple AI** combining random fire with a targeting heuristic
+- **User input validation** and edge case handling
+- **Writing documented, readable code** with docstrings on every function
