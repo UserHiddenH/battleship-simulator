@@ -1,9 +1,9 @@
-##Battleship — Python Terminal Simulator
+Battleship — Python Terminal Simulator
 
 A fully-featured Battleship game playable in the terminal, built in Python with no external dependencies. Three game modes including an AI vs AI statistical simulation over 100 games.
 
 
-🎓 Group project (4 people) — L1 Maths-CS, Université Paris Cité. The goal was to reproduce the classic Battleship game as a Python terminal application.
+Group project (4 people) — L1 Maths-CS, Université Paris Cité. The goal was to reproduce the classic Battleship game as a Python terminal application.
 
 
 
@@ -59,10 +59,6 @@ Displays each side's win rate
 Determines whether the first player has a statistical advantage
 
 
-
-
-
-
 Getting Started
 
 Requirements: Python 3.x — no external libraries needed.
@@ -80,9 +76,9 @@ Project Structure
 
 battleship-simulator/
 │
-├── BN1_code.py       # Single source file — all game logic
+├── battleship-simulator_code.py        # Single source file — all game logic
+├── .gitignore        # Python gitignore
 └── README.md
-
 
 Code Overview
 
@@ -100,13 +96,3 @@ Modeling a game state with separate grids (real state vs display)
 Implementing a simple AI combining random fire with a targeting heuristic
 User input validation and edge case handling
 Writing documented, readable code with docstrings on every function
-
-
-
-Possible Improvements
-
-
- Advanced AI: probability-based hunt & target algorithm
- Graphical interface using tkinter or pygame
- Save / load game
- Network mode (two players on two machines)
