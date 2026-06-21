@@ -5,7 +5,7 @@ A fully-featured Battleship game playable in the terminal, built in Python with 
 >  **Group project** (4 people) — *L1 Maths-CS, Université Paris Cité*. The goal was to reproduce the classic Battleship game as a Python terminal application.
 </p>
 
-## Preview.
+## Preview
 
 ```
     1 2 3 4 5 6 7 8 9 10
